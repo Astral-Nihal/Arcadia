@@ -112,4 +112,4 @@ You must have a local server environment with PHP and MySQL. The easiest way is 
 
 ## **🤝 Acknowledgements**
 
-This project was a fantastic journey. Special thanks to the user for the collaborative process, detailed feedback, and bug-hunting that made Arcadia what it is.
+This project was a fantastic journey. A huge thanks to Google's Gemini, which served as an AI collaborator and development partner. It helped generate the boilerplate code, debug complex logic (like that stubborn Sudoku generator!), iterate on UI/UX, and bring this entire project from a simple idea to a fully functional platform.
