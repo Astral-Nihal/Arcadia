@@ -1,0 +1,219 @@
+/* --- STYLES COPIED FROM tictactoe.css FOR CONSISTENCY --- */
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Re-defining btn-primary for a cleaner, consistent look */
+.btn-primary {
+    background-color: #4f46e5;
+    /* indigo-600 */
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #6366f1;
+    /* indigo-500 */
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background-color: #1f2937;
+    /* gray-800 */
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid #4b5563;
+    /* gray-600 */
+}
+
+
+/* --- 2048-SPECIFIC STYLES (ADAPTED TO NEW THEME) --- */
+:root {
+    --cell-gap: 15px;
+}
+
+.score-container {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+#score {
+    color: #a5b4fc;
+    /* indigo-300 */
+}
+
+#game-board-container {
+    position: relative;
+    /* UPDATED: Color to match Tic-Tac-Toe's darker elements */
+    background-color: #374151;
+    /* gray-700 */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    padding: var(--cell-gap);
+    box-sizing: border-box;
+    width: clamp(300px, 90vw, 450px);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    /* Center the board */
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: var(--cell-gap);
+    width: 100%;
+    height: 100%;
+}
+
+.grid-cell {
+    /* UPDATED: Color to match Tic-Tac-Toe's cell background */
+    background-color: #1f2937;
+    /* gray-800 */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+}
+
+.tile {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    /* rounded-lg */
+    transition: top 100ms ease-in-out, left 100ms ease-in-out;
+    color: #111827;
+    /* gray-900 for text on light tiles */
+    font-size: clamp(1.5rem, 7vmin, 2.5rem);
+    /* Responsive font size */
+}
+
+/* Animations for tiles (spawn and merge) */
+.tile-new {
+    animation: spawn 200ms ease-in-out;
+}
+
+.tile-merged {
+    animation: merge 200ms ease-in-out;
+}
+
+@keyframes spawn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes merge {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* TILE COLORS (Kept original vibrant colors for gameplay clarity) */
+.tile[data-value="2"] {
+    background-color: #a9b1d6;
+}
+
+.tile[data-value="4"] {
+    background-color: #7aa2f7;
+}
+
+.tile[data-value="8"] {
+    background-color: #ad8ee6;
+    color: white;
+}
+
+.tile[data-value="16"] {
+    background-color: #bb9af7;
+    color: white;
+}
+
+.tile[data-value="32"] {
+    background-color: #ff9e64;
+    color: white;
+}
+
+.tile[data-value="64"] {
+    background-color: #f7768e;
+    color: white;
+}
+
+.tile[data-value="128"] {
+    background-color: #e0af68;
+    color: white;
+}
+
+.tile[data-value="256"] {
+    background-color: #9ece6a;
+    color: white;
+}
+
+.tile[data-value="512"] {
+    background-color: #73daca;
+    color: white;
+}
+
+.tile[data-value="1024"] {
+    background-color: #c0caf5;
+    color: #1a1b26;
+}
+
+.tile[data-value="2048"] {
+    background-color: #ffffff;
+    color: #1a1b26;
+}
+
+.tile[data-value="4096"] {
+    background-color: #ff007f;
+    color: white;
+}

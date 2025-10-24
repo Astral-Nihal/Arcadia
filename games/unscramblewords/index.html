@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unscramble Words - Arcadia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="unscramblewords.css">
+</head>
+
+<body class="bg-gray-900 text-white font-poppins antialiased flex items-center justify-center min-h-screen p-4">
+
+    <div class="game-container text-center">
+        <a href="../../dashboard.php" class="back-link text-indigo-400 hover:underline mb-4 inline-block">&larr; Back to
+            Games</a>
+
+        <h1 class="text-5xl font-bold text-white mb-2">Unscramble Words</h1>
+        <p class="text-gray-300 text-lg mb-4">Unscramble the word before time runs out!</p>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="label">Time Left</span>
+                <span id="time-display" class="value">30s</span>
+            </div>
+            <div class="status-item">
+                <span class="label">Your Score</span>
+                <span id="score-display" class="value">0</span>
+            </div>
+        </div>
+
+        <p id="hint-text" class="text-gray-400 h-6 my-4">Guess the word!</p>
+
+        <div id="scrambled-word-display" class="scrambled-word">
+        </div>
+
+        <form id="guess-form" class="guess-form">
+            <input type="text" id="guess-input" placeholder="Enter your guess" autocomplete="off" required>
+            <button type="submit" class="btn-primary">Submit</button>
+        </form>
+
+        <div class="game-controls">
+            <button id="refresh-button" class="control-button">Get a New Word</button>
+            <button id="end-game-button" class="control-button danger">End & Save Score</button>
+        </div>
+    </div>
+
+    <div id="correct-guess-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 class="text-4xl font-bold">Correct!</h2>
+        </div>
+    </div>
+
+    <div id="end-game-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title" class="text-3xl font-bold mb-4">Game Over!</h2>
+            <p id="modal-message" class="text-xl mb-6">Your final score is:</p>
+            <p id="final-score-display" class="text-4xl font-bold text-indigo-400 mb-6">0</p>
+            <button id="play-again-button" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="unscramblewords.js"></script>
+</body>
+
+</html>

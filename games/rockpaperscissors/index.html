@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Arcadia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="rockpaperscissors.css">
+</head>
+
+<body class="bg-gray-900 text-white font-poppins antialiased flex items-center justify-center min-h-screen">
+
+    <div class="game-container text-center p-4">
+        <a href="../../dashboard.php" class="back-link text-indigo-400 hover:underline mb-4 inline-block">&larr; Back to
+            Games</a>
+
+        <h1 class="text-5xl font-bold text-white mb-2">Rock Paper Scissors</h1>
+        <p class="text-gray-300 text-xl h-8 mb-4">First to 3 wins!</p>
+
+        <div class="score-board mb-6">
+            <div class="score-player">
+                <p class="text-lg">Player</p>
+                <span id="player-score" class="text-5xl font-bold">0</span>
+            </div>
+            <div class="score-computer">
+                <p class="text-lg">Computer</p>
+                <span id="computer-score" class="text-5xl font-bold">0</span>
+            </div>
+        </div>
+
+        <div class="choices flex justify-center items-center gap-8 my-6">
+            <div class="choice" id="player-choice-display">?</div>
+            <div class="vs-text text-3xl font-bold text-gray-500">VS</div>
+            <div class="choice" id="computer-choice-display">?</div>
+        </div>
+
+        <p id="result-text" class="result-text text-2xl font-bold h-10">&nbsp;</p>
+
+        <div class="buttons flex justify-center gap-4 mt-4">
+            <button class="choice-btn" data-choice="rock">Rock</button>
+            <button class="choice-btn" data-choice="paper">Paper</button>
+            <button class="choice-btn" data-choice="scissors">Scissors</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title" class="text-3xl font-bold mb-4">You Win!</h2>
+            <p id="modal-message" class="text-xl mb-6">Final Score: 3 - 1</p>
+            <button id="play-again-button" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="rockpaperscissors.js"></script>
+</body>
+
+</html>

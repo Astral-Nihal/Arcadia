@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 - Arcadia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="2048.css">
+</head>
+
+<body class="bg-gray-900 text-white font-poppins antialiased flex items-center justify-center min-h-screen">
+
+    <div class="game-container text-center p-4">
+        <a href="../../dashboard.php" class="back-link text-indigo-400 hover:underline mb-4 inline-block">&larr; Back to
+            Games</a>
+
+        <h1 class="text-5xl font-bold text-white mb-2">2048</h1>
+
+        <div id="status-display" class="text-gray-300 text-xl h-20 mb-4 transition-colors">
+            <p>Join the numbers, get to the 2048 tile!</p>
+            <div class="score-container">
+                SCORE: <span id="score">0</span>
+            </div>
+        </div>
+
+
+        <div id="game-board-container">
+            <div id="game-board"></div>
+        </div>
+
+        <button id="restart-button" class="btn-primary mt-6">New Game</button>
+    </div>
+
+    <div id="modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title" class="text-3xl font-bold mb-4">Game Over!</h2>
+            <p id="modal-message" class="text-xl mb-6">Your Score: 0</p>
+            <button id="play-again-button" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="2048.js"></script>
+</body>
+
+</html>
