@@ -22,6 +22,11 @@ A great one would be the dashboard.png (like the one you sent me).
 You can add it like this:  
 <img src="https." alt="Arcadia Game Dashboard">  
 -->  
+
+<a href="https://arcadia.iceiy.com" style="background-color: #66fcf1; color: #1f2833; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+  Arcadia Link
+</a>
+
 </p>
 
 ## **🌟 About The Project**
