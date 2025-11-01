@@ -27,6 +27,14 @@ You can add it like this:
   Arcadia - The Web Game Portal
 </a>
 
+<img src="images/login.png" alt="Login Page">
+
+<img src="images/register.png" alt="Register Page">
+
+<img src="images/dashboard.png" alt="Dashboard Page">
+
+<img src="images/leaderboard.png" alt="Leaderboard Page">
+
 </p>
 
 ## **🌟 About The Project**
