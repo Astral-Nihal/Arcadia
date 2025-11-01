@@ -14,6 +14,8 @@
 <img src="https://img.shields.io/badge/Xampp-F37623?style=for-the-badge&logo=xampp&logoColor=white" alt="XAMPP"> 
 </p>  
 
+<hr>
+
 <p align="center">  
 <!--  
 NOTE TO USER:  
@@ -22,18 +24,20 @@ A great one would be the dashboard.png (like the one you sent me).
 You can add it like this:  
 <img src="https." alt="Arcadia Game Dashboard">  
 -->  
-<strong> Link to the website: 
+<strong> Link to the website: </strong>
 <a href="https://arcadia.iceiy.com" target="_blank" >
   Arcadia - The Web Game Portal
-</a>
+</a> <br>
 
-<img src="images/login.png" alt="Login Page">
+<strong> Here are some screenshots of the website: </strong> <br>
 
-<img src="images/register.png" alt="Register Page">
+<img src="images/login.png" alt="Login Page"> <br>
 
-<img src="images/dashboard.png" alt="Dashboard Page">
+<img src="images/register.png" alt="Register Page"> <br>
 
-<img src="images/leaderboard.png" alt="Leaderboard Page">
+<img src="images/dashboard.png" alt="Dashboard Page"> <br>
+
+<img src="images/leaderboard.png" alt="Leaderboard Page"> <br>
 
 </p>
 
